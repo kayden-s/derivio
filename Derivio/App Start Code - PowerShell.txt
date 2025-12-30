@@ -1,2 +1,0 @@
-cd "C:\Users\ZA\Downloads\Branchify"
-python -m http.server 8000
