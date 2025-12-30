@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+<head>
+    <meta charSet="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../_next/static/chunks/bfbb9dd8d024fefc.css" data-precedence="next" />
+    <link rel="preload" href="https://www.googletagmanager.com/gtag/js?id=G-71CH6NNZRM" as="script" />
+    <title>Derivio | Free Trading Calculators</title>
+    <meta name="description"
+        content="Free, precise trading calculators for options, futures, and risk management. No fluff. Just math." />
+    <link rel="manifest" href="../favicon/site.webmanifest" />
+    <meta property="og:title" content="Free trading calculators for smarter trades" />
+    <meta property="og:description"
+        content="Free, no-login trading calculators for position sizing, options, futures, and risk management. Built for speed, clarity, and accuracy." />
+    <meta property="og:url" content="https://Derivio" />
+    <meta property="og:site_name" content="Derivio" />
+    <meta property="og:image" content="https://Derivio/og/og-Derivio.png?v=3" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Free trading calculators for smarter trades" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Free trading calculators for smarter trades" />
+    <meta name="twitter:description"
+        content="Free, no-login trading calculators for position sizing, options, futures, and risk management. Built for speed, clarity, and accuracy." />
+    <meta name="twitter:image" content="https://Derivio/og/og-Derivio.png?v=3" />
+    <meta name="twitter:image:alt" content="Free trading calculators for smarter trades" />
+    <link rel="icon" href="../favicon28a7.ico?favicon.0b3bf435.ico" sizes="256x256" type="image/x-icon" />
+    <link rel="icon" href="../favicon/favicon.ico" />
+    <link rel="icon" href="../favicon/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="../favicon/favicon-96x96.png" sizes="96x96" type="image/png" />
+    <link rel="apple-touch-icon" href="../favicon/apple-touch-icon.png" />
+</head>
+
+<body class="bg-slate-50 text-slate-900">
+    <div hidden="">
+        <!--$-->
+        <!--/$-->
+    </div>
+    <div class="min-h-screen flex flex-col">
+        <header class="border-b border-slate-200 bg-white">
+            <div class="max-w-5xl mx-auto flex items-center justify-between px-4 py-4">
+                <a class="ml-1" href="../index.html">
+                    <img alt="Derivio" width="180" height="40" decoding="async" data-nimg="1"
+                        class="h-9 w-auto md:h-10 opacity-95 hover:opacity-100 transition-opacity duration-150"
+                        style="color:transparent" src="../logo.png" />
+                </a>
+                <nav class="flex items-center gap-4 sm:gap-6 text-sm text-slate-600">
+                    <a href="trading.html" class="hover:text-slate-900">Trading</a>
+                    <a href="options.html" class="hover:text-slate-900">Options</a>
+                    <a href="forex.html" class="hidden sm:block hover:text-slate-900">Forex</a>
+                    <a href="futures.html" class="hidden sm:block hover:text-slate-900">Futures</a>
+                </nav>
+            </div>
+        </header>
+        <main class="flex-1">
+            <div class="max-w-3xl mx-auto px-4 py-8">
+                <h1 class="text-2xl md:text-3xl font-bold tracking-tight text-slate-900 mb-3">Position Size Calculator
+                </h1>
+                <p class="text-sm text-slate-600 mb-6 max-w-xl">Calculate position size (shares) for long or short
+                    trades based on your account size, risk tolerance, and stop loss level. Essential for proper risk
+                    management.</p>
+                <div class="mb-6">
+                    <label class="block text-xs font-medium text-slate-600 mb-2">Trade Direction</label>
+                    <select id="tradeDirection"
+                        class="pr-8 rounded-xl border border-slate-300 bg-white px-3 py-2.5 text-sm text-slate-900 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500">
+                        <option value="long" selected>Long</option>
+                        <option value="short">Short</option>
+                    </select>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-4 mb-6">
+                    <div>
+                        <label class="block text-xs font-medium text-slate-600 mb-1">Account size</label>
+                        <div class="relative">
+                            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-xs text-slate-500">$</span>
+                            <input type="number" id="accountSize" inputmode="decimal"
+                                class="w-full rounded-xl border border-slate-300 bg-white pl-7 pr-3 py-2.5 text-sm text-slate-900  focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500"
+                                min="0" placeholder="Enter account size">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-slate-600 mb-1">Risk per trade</label>
+                        <div class="relative">
+                            <input type="number" id="riskPerTrade" inputmode="decimal"
+                                class="w-full rounded-xl border border-slate-300 bg-white px-3 py-2.5 text-sm text-slate-900  focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500"
+                                min="0" max="100" step="0.5" placeholder="Enter risk percentage">
+                            <span class="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-slate-500">%</span>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-slate-600 mb-1">Entry price</label>
+                        <div class="relative">
+                            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-xs text-slate-500">$</span>
+                            <input type="number" id="entryPrice" inputmode="decimal"
+                                class="w-full rounded-xl border border-slate-300 bg-white pl-7 pr-3 py-2.5 text-sm text-slate-900  focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500"
+                                min="0" step="0.01" placeholder="Enter entry price">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-slate-600 mb-1">Stop loss price</label>
+                        <div class="relative">
+                            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-xs text-slate-500">$</span>
+                            <input type="number" id="stopLoss" inputmode="decimal"
+                                class="w-full rounded-xl border border-slate-300 bg-white pl-7 pr-3 py-2.5 text-sm text-slate-900  focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500"
+                                min="0" step="0.01" placeholder="Enter stop loss price">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap items-center gap-3 mb-6">
+                    <button id="calculateBtn"
+                        class="inline-flex items-center justify-center rounded-full bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white  hover:bg-slate-800 transition">Calculate
+                        position size</button>
+                    <button id="resetBtn"
+                        class="inline-flex items-center justify-center rounded-full border border-slate-300 px-4 py-2 text-xs font-medium text-slate-700 hover:bg-slate-50 transition">Reset</button>
+                </div>
+
+                <div id="results" class="rounded-3xl bg-white border border-slate-200  p-5">
+                    <p class="text-sm text-slate-500">Enter your account size, risk percentage, entry price, and stop
+                        loss, then click <span class="font-semibold">Calculate position size</span> to see the
+                        recommended number of shares.</p>
+                </div>
+
+                <div class="mt-6 rounded-2xl bg-slate-100 border border-slate-200 p-4">
+                    <h2 class="text-sm font-semibold text-slate-700 mb-2">Position Size Formula</h2>
+                    <div class="text-xs text-slate-600 space-y-1 font-mono">
+                        <p>Dollar Risk = Account Size × Risk %</p>
+                        <p>Risk Per Share = |Entry Price - Stop Loss|</p>
+                        <p>Position Size = floor(Dollar Risk ÷ Risk Per Share)</p>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-2">Works for both long and short positions. Shares are floored
+                        to whole units.</p>
+                </div>
+                <div class="mt-6 rounded-2xl bg-slate-50 border border-slate-200 p-5">
+                    <h2 class="text-sm font-semibold text-slate-700 mb-4">Related Tools</h2>
+                    <div class="grid sm:grid-cols-3 gap-3">
+                        <a class="group rounded-xl border border-slate-200 bg-white p-3 hover:border-slate-300 hover:shadow-md transition"
+                            href="/tools/kelly-criterion-calculator">
+                            <h3 class="font-medium text-sm text-slate-900 group-hover:text-sky-600 transition mb-1">
+                                Kelly Criterion Calculator</h3>
+                            <p class="text-xs text-slate-600">Find the optimal percentage to risk per trade</p>
+                        </a>
+                        <a class="group rounded-xl border border-slate-200 bg-white p-3 hover:border-slate-300 hover:shadow-md transition"
+                            href="/tools/risk-of-ruin-calculator">
+                            <h3 class="font-medium text-sm text-slate-900 group-hover:text-sky-600 transition mb-1">Risk
+                                of Ruin Calculator</h3>
+                            <p class="text-xs text-slate-600">Calculate probability of account blowup</p>
+                        </a>
+                        <a class="group rounded-xl border border-slate-200 bg-white p-3 hover:border-slate-300 hover:shadow-md transition"
+                            href="/tools/breakeven-calculator">
+                            <h3 class="font-medium text-sm text-slate-900 group-hover:text-sky-600 transition mb-1">
+                                Breakeven Calculator</h3>
+                            <p class="text-xs text-slate-600">Calculate risk/reward ratio and minimum win rate</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                const tradeDirection = document.getElementById('tradeDirection');
+                const accountSize = document.getElementById('accountSize');
+                const riskPerTrade = document.getElementById('riskPerTrade');
+                const entryPrice = document.getElementById('entryPrice');
+                const stopLoss = document.getElementById('stopLoss');
+                const calculateBtn = document.getElementById('calculateBtn');
+                const resetBtn = document.getElementById('resetBtn');
+                const results = document.getElementById('results');
+
+                function calculatePositionSize() {
+                    const account = parseFloat(accountSize.value);
+                    const risk = parseFloat(riskPerTrade.value);
+                    const entry = parseFloat(entryPrice.value);
+                    const stop = parseFloat(stopLoss.value);
+                    const direction = tradeDirection.value;
+
+                    if (isNaN(account) || isNaN(risk) || isNaN(entry) || isNaN(stop)) {
+                        results.innerHTML = '<p class="text-sm text-red-500">Please enter valid values for all fields.</p>';
+                        return;
+                    }
+
+                    if (account <= 0 || risk <= 0 || entry <= 0 || stop <= 0) {
+                        results.innerHTML = '<p class="text-sm text-red-500">All values must be greater than zero.</p>';
+                        return;
+                    }
+
+                    // Validate stop loss is on the correct side of entry
+                    if (direction === 'long' && stop >= entry) {
+                        results.innerHTML = '<p class="text-sm text-red-500">For long positions, stop loss must be below entry price.</p>';
+                        return;
+                    }
+                    if (direction === 'short' && stop <= entry) {
+                        results.innerHTML = '<p class="text-sm text-red-500">For short positions, stop loss must be above entry price.</p>';
+                        return;
+                    }
+
+                    const dollarRisk = account * (risk / 100);
+                    const riskPerShare = Math.abs(entry - stop);
+                    const positionSize = Math.floor(dollarRisk / riskPerShare);
+                    const positionValue = positionSize * entry;
+                    const maxDollarRisk = positionSize * riskPerShare;
+                    const actualRiskPercentage = (maxDollarRisk / account) * 100;
+
+                    const directionLabel = direction.charAt(0).toUpperCase() + direction.slice(1);
+
+                    results.innerHTML = `
+                        <p class="text-sm text-slate-500 mb-4">Based on your ${directionLabel.toLowerCase()} position parameters:</p>
+                        
+                        <div class="bg-slate-100 p-4 rounded-xl  border border-slate-200 mb-6">
+                            <p class="text-sm text-slate-700"><strong>Position size</strong></p>
+                            <p class="text-3xl font-semibold text-slate-900">${positionSize.toLocaleString()} shares</p>
+                            <p class="text-xs text-slate-400">(${directionLabel})</p>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
+                            <div class="bg-white rounded-xl p-4  border border-slate-200">
+                                <p class="text-xs text-slate-500">Position value</p>
+                                <p class="text-lg font-semibold text-slate-900">$${positionValue.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>
+                            </div>
+                            <div class="bg-white rounded-xl p-4  border border-slate-200">
+                                <p class="text-xs text-slate-500">Risk per share</p>
+                                <p class="text-lg font-semibold text-slate-900">$${riskPerShare.toFixed(2)}</p>
+                            </div>
+                            <div class="bg-white rounded-xl p-4  border border-slate-200">
+                                <p class="text-xs text-slate-500">Max dollar risk</p>
+                                <p class="text-lg font-semibold text-slate-900">$${dollarRisk.toFixed(2)}</p>
+                            </div>
+                            <div class="bg-white rounded-xl p-4  border border-slate-200">
+                                <p class="text-xs text-slate-500">Actual risk</p>
+                                <p class="text-lg font-semibold text-slate-900">$${maxDollarRisk.toFixed(2)}</p>
+                                <p class="text-xs text-slate-900">(${actualRiskPercentage.toFixed(2)}%)</p>
+                            </div>
+                        </div>
+                        
+                        <p class="mt-4 text-sm text-slate-500">
+                            This ${directionLabel.toLowerCase()} position risks $${maxDollarRisk.toFixed(2)} if price ${direction === 'long' ? 'falls' : 'rises'} to your stop loss at $${stop.toFixed(2)}. With ${positionSize.toLocaleString()} shares, your actual risk is ${actualRiskPercentage.toFixed(2)}% of your account.
+                        </p>
+                    `;
+                }
+
+                function reset() {
+                    accountSize.value = '';
+                    riskPerTrade.value = '';
+                    entryPrice.value = '';
+                    stopLoss.value = '';
+                    tradeDirection.value = 'long';
+                    results.innerHTML = '<p class="text-sm text-slate-500">Enter your account size, risk percentage, entry price, and stop loss, then click <span class="font-semibold">Calculate position size</span> to see the recommended number of shares.</p>';
+                }
+
+                calculateBtn.addEventListener('click', calculatePositionSize);
+                resetBtn.addEventListener('click', reset);
+            </script>
+            <footer class="mt-6 sm:mt-12 mb-6">
+                <div
+                    class="flex flex-col items-center gap-1 sm:flex-row sm:justify-center sm:gap-3 text-xs text-slate-500 text-center sm:text-left">
+                    <p>© 2025 Derivio. All rights reserved.</p>
+                </div>
+            </footer>
+</body>
+
+</html>
